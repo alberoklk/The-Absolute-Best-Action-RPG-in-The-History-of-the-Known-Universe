@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4v2mdrsvjoug"]
+
+[ext_resource type="Texture2D" uid="uid://dlrmgvby05ni4" path="res://World/Bush.png" id="1_dio2v"]
+[ext_resource type="PackedScene" uid="uid://blfurkmmfdy2p" path="res://Player/player.tscn" id="2_lgm2n"]
+
+[node name="World" type="Node2D"]
+
+[node name="Bush" type="Sprite2D" parent="."]
+position = Vector2(29, 27)
+texture = ExtResource("1_dio2v")
+
+[node name="Player" parent="." instance=ExtResource("2_lgm2n")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, 0, 61, 0, 30, 26, 55, 44, 29, 93, 56, 98, 34, 142, 77, 117, 87, 153, 146, 99, 152, 156, 205, 137, 225, 163, 243, 124, 266, 146, 264, 103, 296, 110, 286, 55, 235, 57, 259, 27, 228, 0, 320, 0, 320, 180, 0, 180)
